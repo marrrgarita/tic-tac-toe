@@ -8,9 +8,9 @@ $('td').on('click', function() {
     console.log('illegal click')
   } else {
   if (turn % 2 === 0) {
-     $(this).text('x').addClass('x');
+     $(this).addClass('x');
    } else {
-     $(this).text('o').addClass('o');
+     $(this).addClass('o');
    }
   //  $(this).off('click');
    turn++;
@@ -38,7 +38,7 @@ function determineWinnerX() {
   ||
   ($('#three').hasClass('x') && $('#five').hasClass('x') && $('#seven').hasClass('x')))
   {
-    alert('X is the winner!');
+    alert('MEOW! Cats are the winner!');
   }
 }
 
@@ -59,7 +59,7 @@ function determineWinnerO() {
   ||
   ($('#three').hasClass('o') && $('#five').hasClass('o') && $('#seven').hasClass('o')))
   {
-    alert('o is the winner!');
+    alert('WOOF! Dogs are the winner!');
   }
 }
 

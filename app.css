@@ -1,4 +1,31 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  text-align: center;
+}
+
+table {
+  width: 660px;
+  margin: 0 auto;
+}
+
 td{
-	border: 1px solid black;
-	padding: 100px;
+  border: 1px solid black;
+  padding: 50px;
+  width: 220px;
+  height: 220px;
+
+}
+
+
+.o {
+  background-image: url('images/dog.jpg');
+}
+
+.x {
+  background-image: url('images/cat.jpg');
 }
