@@ -36,7 +36,7 @@ function determineWinnerX() {
   ||
   ($('#three').hasClass('x') && $('#five').hasClass('x') && $('#seven').hasClass('x')))
   {
-    var winner = 'x';
+    alert('X is the winner!');
   }
 }
 
@@ -57,10 +57,14 @@ function determineWinnerO() {
   ||
   ($('#three').hasClass('o') && $('#five').hasClass('o') && $('#seven').hasClass('o')))
   {
-    var winner = 'x';
+    alert('o is the winner!');
   }
 }
 
+$('.restart').on('click', function(){
+  $('.square').removeClass('x').removeClass('o');
+  $('.square').text("");
+})
 
 
 });
