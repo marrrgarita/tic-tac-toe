@@ -1,7 +1,8 @@
 $(document).ready(function() {
 
 var turn = 1;
-
+var xWin = 0;
+var oWin = 0;
 
 $('td').on('click', function() {
   if ($(this).hasClass('o') || $(this).hasClass('x')) {
@@ -39,6 +40,8 @@ function determineWinnerX() {
   ($('#three').hasClass('x') && $('#five').hasClass('x') && $('#seven').hasClass('x')))
   {
     alert('MEOW! Cats are the winner!');
+    xWin += 1;
+    $('.cat-score').text('Cats:  ' + xWin);
   }
 }
 
@@ -60,6 +63,8 @@ function determineWinnerO() {
   ($('#three').hasClass('o') && $('#five').hasClass('o') && $('#seven').hasClass('o')))
   {
     alert('WOOF! Dogs are the winner!');
+    oWin += 1;
+    $('.dog-score').text('Dogs:  ' + oWin);
   }
 }
 
