@@ -11,6 +11,7 @@ font-family: 'Baloo', cursive;*/
 body {
   text-align: center;
   font-family: 'Baloo', cursive;
+  background-color: papayawhip;
 }
 
 table {
@@ -19,21 +20,40 @@ table {
 }
 
 td{
-  border: 1px solid black;
+  border: 5px solid papayawhip;
   padding: 50px;
   width: 220px;
   height: 220px;
+  background-color: powderblue;
+  border-radius: 5%;
 
 }
 
 h1 {
   margin: 0;
-  font-size: 47px;
+  font-size: 60px;
+  color: lightpink;
+  text-transform: uppercase;
 }
 
 h3 {
   display: inline;
   margin: 0 50px;
+  font-size: 24px;
+}
+
+.restart {
+  background-color: powderblue;
+  border: 5px solid lavender;
+  font-size: 18px;
+  font-family: 'baloo', cursive;
+  text-transform: uppercase;
+}
+
+.restart:hover,
+td:hover{
+  background-color: lavender;
+  border-color: powderblue;
 }
 
 .o {
