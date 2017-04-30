@@ -3,18 +3,20 @@ $(document).ready(function() {
 var turn = 1;
 
 
-
-
 $('td').on('click', function() {
+  if ($(this).hasClass('o') || $(this).hasClass('x')) {
+    console.log('illegal click')
+  } else {
   if (turn % 2 === 0) {
      $(this).text('x').addClass('x');
    } else {
      $(this).text('o').addClass('o');
    }
-   $(this).off('click');
+  //  $(this).off('click');
    turn++;
    determineWinnerX();
    determineWinnerO();
+ }
 });
 
 
@@ -64,6 +66,7 @@ function determineWinnerO() {
 $('.restart').on('click', function(){
   $('.square').removeClass('x').removeClass('o');
   $('.square').text("");
+  turn = 1;
 })
 
 
