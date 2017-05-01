@@ -77,6 +77,7 @@ $('.restart').on('click', function(){
   $('.square').removeClass('x').removeClass('o');
   $('.square').text("");
   turn = 1;
+  winner ='';
 })
 
 
