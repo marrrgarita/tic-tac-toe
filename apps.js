@@ -42,12 +42,15 @@ function determineWinnerX() {
   ||
   ($('#three').hasClass('x') && $('#five').hasClass('x') && $('#seven').hasClass('x')))
   {
-    alert('MEOW! Cats are the winner!');
     xWin += 1;
     winner = 'cat';
     $('.cat-score').text('Cats:  ' + xWin);
+    $('<div id="win"></div>')
+      .text("Cats Win!")
+      .prependTo('.options');
   }
 }
+
 
 function determineWinnerO() {
   if (($('#one').hasClass('o') && $('#two').hasClass('o') && $('#three').hasClass('o'))
@@ -66,10 +69,12 @@ function determineWinnerO() {
   ||
   ($('#three').hasClass('o') && $('#five').hasClass('o') && $('#seven').hasClass('o')))
   {
-    alert('WOOF! Dogs are the winner!');
     oWin += 1;
     winner = 'dog';
     $('.dog-score').text('Dogs:  ' + oWin);
+    $('<div id="win"></div>')
+      .text("Dogs Win!")
+      .prependTo('.options');
   }
 }
 
@@ -78,6 +83,8 @@ $('.restart').on('click', function(){
   $('.square').text("");
   turn = 1;
   winner ='';
+  $('#win').remove();
+
 })
 
 

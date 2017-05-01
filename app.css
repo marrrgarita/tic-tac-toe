@@ -67,3 +67,7 @@ td:hover{
     background: url('images/cat.jpg');
     background-size: contain;
 }
+
+#win {
+  font-size: 40px;
+}
